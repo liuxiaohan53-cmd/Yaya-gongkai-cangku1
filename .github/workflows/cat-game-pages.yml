@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'cat-game/**'
+      - 'index.html'
       - '.github/workflows/cat-game-pages.yml'
   workflow_dispatch:
 permissions:
@@ -27,7 +28,7 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: cat-game
+          path: .
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
